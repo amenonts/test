@@ -24,29 +24,36 @@ answer:
     join_path:
     - join:
       - Lineorder PartKey - Part PartKey
-  search_query: "[LINEORDER_1::Revenue] [PART_1::Color]"
+  search_query: "[LINEORDER_1::Revenue] [PART_1::Color] [LINEORDER_1::Discount]"
   answer_columns:
   - name: Total Revenue
   - name: Color
+  - name: Total Discount
   table:
     table_columns:
     - column_id: Color
       headline_aggregation: COUNT_DISTINCT
     - column_id: Total Revenue
       headline_aggregation: SUM
+    - column_id: Total Discount
+      headline_aggregation: SUM
     ordered_column_ids:
     - Color
     - Total Revenue
+    - Total Discount
     client_state: "{\"widthState\":{},\"wrapTableHeader\":true}"
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"Color\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}]}"
   chart:
     type: COLUMN
     chart_columns:
     - column_id: Color
     - column_id: Total Revenue
+    - column_id: Total Discount
     axis_configs:
     - x:
       - Color
       "y":
       - Total Revenue
     client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"32286644-696b-417a-ada7-11a9a350df17\":{\"linkedColumns\":[\"Total Revenue\"],\"axisType\":\"Y\",\"isOpposite\":false},\"d3525ac6-c098-479a-a086-dfbde7919d6d\":{\"linkedColumns\":[\"Color\"],\"axisType\":\"X\"}},\"version\":\"V2.1\",\"columnProperties\":{\"Color\":{},\"Total Revenue\":{}}}"
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Color\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}},{\"columnId\": \"Total Discount\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"32286644-696b-417a-ada7-11a9a350df17\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"d3525ac6-c098-479a-a086-dfbde7919d6d\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Color\"]}}]}"
   display_mode: TABLE_MODE
