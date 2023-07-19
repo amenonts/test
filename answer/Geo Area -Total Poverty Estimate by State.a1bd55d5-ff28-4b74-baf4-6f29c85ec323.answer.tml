@@ -1,0 +1,41 @@
+guid: a1bd55d5-ff28-4b74-baf4-6f29c85ec323
+answer:
+  name: Geo Area -Total Poverty Estimate by State
+  description: with legend and data label
+  tables:
+  - id: geo_usa_data
+    name: geo_usa_data
+    fqn: 1df8c0eb-6d0c-49c1-87ea-b564dcee828f
+  search_query: "[State] [Poverty Estimate] top 10 [State FIPS Code]"
+  answer_columns:
+  - name: State
+  - name: Total Poverty Estimate
+  - name: State FIPS Code
+  table:
+    table_columns:
+    - column_id: State
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: State FIPS Code
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Total Poverty Estimate
+      headline_aggregation: SUM
+    ordered_column_ids:
+    - State
+    - State FIPS Code
+    - Total Poverty Estimate
+    client_state: "{\"dataOffset\":0.0,\"wrapTableHeader\":true}"
+  chart:
+    type: GEO_AREA
+    chart_columns:
+    - column_id: State
+    - column_id: State FIPS Code
+    - column_id: Total Poverty Estimate
+    axis_configs:
+    - x:
+      - State
+      "y":
+      - Total Poverty Estimate
+      color:
+      - State FIPS Code
+    client_state: "{\"mapViewport\":{\"zoomLevel\":3.0,\"center\":[-1.0935558217738152E7,4513779.017958321]},\"multiColorSeriesColors\":{},\"systemMultiColorSeriesColors\":{\"6\":{\"State\":[\"#ffffe5\",\"#d5f0ca\",\"#abe1af\",\"#7dd295\",\"#46c27b\",\"#34a165\",\"#238150\",\"#11623c\",\"#004529\"]},\"12\":{\"State\":[\"#ffffb2\",\"#fddd87\",\"#fba35d\",\"#f75534\",\"#f9140a\",\"#d70315\",\"#b10026\"]},\"13\":{\"State\":[\"#f7fbff\",\"#cfe0f9\",\"#a6c6f3\",\"#77aded\",\"#3295e6\",\"#287ac6\",\"#1e60a6\",\"#144888\",\"#08306b\"]},\"17\":{\"State\":[\"#ffffe5\",\"#d5f0ca\",\"#abe1af\",\"#7dd295\",\"#46c27b\",\"#34a165\",\"#238150\",\"#11623c\",\"#004529\"]},\"26\":{\"State\":[\"#f7f4f9\",\"#f5cfec\",\"#f1aadf\",\"#eb83d2\",\"#e356c5\",\"#c44198\",\"#a52c6d\",\"#861744\",\"#67001f\"]},\"36\":{\"State\":[\"#ffffd9\",\"#d7f1da\",\"#abe2db\",\"#78d4db\",\"#1ac5db\",\"#2397b9\",\"#226c97\",\"#194377\",\"#081d58\"]},\"37\":{\"State\":[\"#fff5f0\",\"#fee0d2\",\"#fcbba1\",\"#fc9272\",\"#fb6a4a\",\"#ef3b2c\",\"#cb181d\",\"#a50f15\",\"#67000d\"]},\"39\":{\"State\":[\"#fcfbfd\",\"#e6d0f8\",\"#cda6f3\",\"#b27ced\",\"#9450e6\",\"#7e3dcb\",\"#692bb0\",\"#541796\",\"#3f007d\"]},\"42\":{\"State\":[\"#ffffb2\",\"#fddd87\",\"#fba35d\",\"#f75534\",\"#f9140a\",\"#d70315\",\"#b10026\"]},\"48\":{\"State\":[\"#f7fbff\",\"#cfe0f9\",\"#a6c6f3\",\"#77aded\",\"#3295e6\",\"#287ac6\",\"#1e60a6\",\"#144888\",\"#08306b\"]},\"Total Poverty Estimate\":{\"State\":[\"#ffffb2\",\"#fddd87\",\"#fba35d\",\"#f75534\",\"#f9140a\",\"#d70315\",\"#b10026\"]}},\"dataLabels\":true,\"seriesColors\":{},\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"924936e0-3f30-4733-8b31-6138fce8354a\":{\"linkedColumns\":[\"Total Poverty Estimate\"],\"axisType\":\"Y\",\"isOpposite\":false},\"c0fb585b-c46b-4496-a00a-8bda606d557c\":{\"linkedColumns\":[\"State\"],\"axisType\":\"X\"}},\"version\":\"V2.1\",\"columnProperties\":{\"State\":{\"dataLabels\":true},\"State FIPS Code\":{\"dataLabels\":true},\"Total Poverty Estimate\":{\"dataLabels\":true}}}"
+  display_mode: CHART_MODE
