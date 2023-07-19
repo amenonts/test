@@ -1,14 +1,14 @@
 guid: a1bd55d5-ff28-4b74-baf4-6f29c85ec323
 answer:
   name: Geo Area -Total Poverty Estimate by State
-  description: with legend and data label
+  description: with legend and data result label
   tables:
   - id: geo_usa_data
-    name: geo_usa_data
+    name: geo_usa_result_data
     fqn: 1df8c0eb-6d0c-49c1-87ea-b564dcee828f
   search_query: "[State] [Poverty Estimate] top 10 [State FIPS Code]"
   answer_columns:
-  - name: State
+  - name: US_State
   - name: Total Poverty Estimate
   - name: State FIPS Code
   table:
