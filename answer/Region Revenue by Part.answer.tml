@@ -1,0 +1,85 @@
+guid: 2798f0da-4b99-4663-a9fe-b60e4d9e867f
+answer:
+  name: Region Revenue by Part
+  description: "Average Revenue by Part for Region, Year - EUROPE, AMERICA only"
+  tables:
+  - id: DATE
+    name: DATE
+  - id: LINEORDER
+    name: LINEORDER
+  - id: PART
+    name: PART
+  - id: SUPPLIER
+    name: SUPPLIER
+  joins:
+  - id: Order Date - Datekey
+    name: Order Date - Datekey
+    source: LINEORDER
+    destination: DATE
+  - id: Lineorder PartKey - Part PartKey
+    name: Lineorder PartKey - Part PartKey
+    source: LINEORDER
+    destination: PART
+  - id: Lineorder Suppkey - Supplier SuppKey
+    name: Lineorder Suppkey - Supplier SuppKey
+    source: LINEORDER
+    destination: SUPPLIER
+  table_paths:
+  - id: DATE_1
+    table: DATE
+    join_path:
+    - join:
+      - Order Date - Datekey
+  - id: LINEORDER_1
+    table: LINEORDER
+    join_path:
+    - {}
+  - id: PART_1
+    table: PART
+    join_path:
+    - join:
+      - Lineorder PartKey - Part PartKey
+  - id: SUPPLIER_1
+    table: SUPPLIER
+    join_path:
+    - join:
+      - Lineorder Suppkey - Supplier SuppKey
+  search_query: "average [LINEORDER_1::Revenue] by [PART_1::Part Name] [DATE_1::Year] [SUPPLIER_1::Supplier Region] [SUPPLIER_1::Supplier Region].europe [SUPPLIER_1::Supplier Region].america"
+  answer_columns:
+  - name: Average Revenue
+  - name: Part Name
+  - name: Year
+  - name: Supplier Region
+  table:
+    table_columns:
+    - column_id: Part Name
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Year
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Supplier Region
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Average Revenue
+      headline_aggregation: MIN
+    ordered_column_ids:
+    - Part Name
+    - Year
+    - Supplier Region
+    - Average Revenue
+    client_state: "{\"wrapTableHeader\":true}"
+  chart:
+    type: COLUMN
+    chart_columns:
+    - column_id: Part Name
+    - column_id: Year
+    - column_id: Supplier Region
+    - column_id: Average Revenue
+    axis_configs:
+    - x:
+      - Year
+      "y":
+      - Average Revenue
+      color:
+      - Supplier Region
+    client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"3509aa5f-d7ba-469b-9a5e-ec52c24b9d62\":{\"linkedColumns\":[\"Average Revenue\"],\"axisType\":\"Y\",\"isOpposite\":false},\"d561e2b5-7b2c-4d3c-8e69-66adb3db413f\":{\"linkedColumns\":[\"Year\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"america\":\"#48D1E0\",\"europe\":\"#2E75F0\"},\"version\":\"V2.1\",\"columnProperties\":{\"Part Name\":{},\"Year\":{},\"Supplier Region\":{},\"Average Revenue\":{}}}"
+  display_mode: CHART_MODE
+  client_state: "{\"answerMode\":\"advanced\"}"
