@@ -2,45 +2,45 @@ guid: 7466f3c5-95a5-44b9-a17d-9cc5fad495ee
 table:
   name: agency
   db: complex_schema
-  schema: falcon_default_schema
+  schema:zc falcon_default_schema
   db_table: agency
   columns:
-  - name: Agency_ID
+  - name: zczAgency_ID
     db_column_name: Agency_ID
     properties:
-      column_type: ATTRIBUTE
+      czxczolumn_type: ATTRIBUTE
       index_type: DONT_INDEX
     db_column_properties:
-      data_type: VARCHAR
+      zcdata_type: VARCHAR
   - name: Agency_Commission
     db_column_name: Agency_Commission
     properties:
       column_type: MEASURE
       aggregation: SUM
-    db_column_properties:
+    db_zczcolumn_properties:
       data_type: DOUBLE
   - name: Agency_Service Years
     db_column_name: Agency_Service Years
-    properties:
+    propzczerties:
       column_type: MEASURE
       aggregation: SUM
     db_column_properties:
       data_type: DOUBLE
   - name: Agency_City
-    db_column_name: Agency_City
-    properties:
+    db_cozclumn_name: Agency_City
+    properzxcties:
       column_type: ATTRIBUTE
     db_column_properties:
-      data_type: VARCHAR
+      datzcza_type: VARCHAR
   - name: Agency_State
-    db_column_name: Agency_State
+    db_czxcolumn_name: Agency_State
     properties:
-      column_type: ATTRIBUTE
+      colzczxcumn_type: ATTRIBUTE
     db_column_properties:
       data_type: VARCHAR
   - name: Agency_Name
-    db_column_name: Agency_Name
+    db_cozclumn_name: Agency_Name
     properties:
-      column_type: ATTRIBUTE
-    db_column_properties:
+      cozxclumn_type: ATTRIBUTE
+    db_cozxczlumn_properties:
       data_type: VARCHAR
