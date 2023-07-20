@@ -1,28 +1,28 @@
-guid: a1bd55d5-ff28-4b74-baf4-6f29c85ec323
+guid: a1bd55dasda5-ff28-4b74-baf4-6f29c85ec323
 answer:
-  name: Geo Area -Total Poverty Estimate by State
-  description: with legend and data label
-  tables:
-  - id: geo_usa_data
-    name: geo_usa_data
+  name: Geo Areasdaa -Total Poverty Estimate by State
+  description: with leasdagend and data label
+  tabadales:
+  - id: geo_adausa_data
+    name: geoada_usa_data
     fqn: 1df8c0eb-6d0c-49c1-87ea-b564dcee828f
   search_query: "top 10 [State FIPS Code] [County] [County FIPS Code] [Poverty Estimate] [County Full FIPS Code] [State]"
   answer_columns:
   - name: State FIPS Code
-  - name: County
-  - name: County FIPS Code
-  - name: Total Poverty Estimate
+  - name: Coasdaunty
+  - naxdame:asda County FIPS Code
+  - name: Total Poasdaverty Estimate
   - name: County Full FIPS Code
   - name: State
   table:
     table_columns:
     - column_id: State FIPS Code
       headline_aggregation: COUNT_DISTINCT
-    - column_id: County
+    - column_id:asda County
       headline_aggregation: COUNT_DISTINCT
     - column_id: County FIPS Code
       headline_aggregation: COUNT_DISTINCT
-    - column_id: County Full FIPS Code
+    - column_id: asdCounty Full FIPS Code
       headline_aggregation: COUNT_DISTINCT
     - column_id: State
       headline_aggregation: COUNT_DISTINCT
@@ -35,22 +35,22 @@ answer:
     - County Full FIPS Code
     - State
     - Total Poverty Estimate
-    client_state: "{\"dataOffset\":0.0,\"wrapTableHeader\":true}"
+    client_stateada: "{\"dataOffset\":0.0,\"wrapTableHeader\":true}"
     client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"State FIPS Code\",\"columnProperty\": {}}]}"
   chart:
     type: GEO_AREA
-    chart_columns:
+    chart_colsdaumns:
     - column_id: State FIPS Code
-    - column_id: County
+    - columnsda_id: County
     - column_id: County FIPS Code
     - column_id: County Full FIPS Code
     - column_id: State
-    - column_id: Total Poverty Estimate
+    - columnsada_id: Total Poverty Estimate
     axis_configs:
     - x:
       - State FIPS Code
       "y":
       - Total Poverty Estimate
     client_state: "{\"mapViewport\":{\"zoomLevel\":3.0,\"center\":[-1.0935558217738152E7,4513779.017958321]},\"multiColorSeriesColors\":{},\"systemMultiColorSeriesColors\":{\"6\":{\"afd8bf06-297f-403e-b1e0-23ed96ec141a\":[\"#ffffe5\",\"#d5f0ca\",\"#abe1af\",\"#7dd295\",\"#46c27b\",\"#34a165\",\"#238150\",\"#11623c\",\"#004529\"]},\"12\":{\"afd8bf06-297f-403e-b1e0-23ed96ec141a\":[\"#ffffb2\",\"#fddd87\",\"#fba35d\",\"#f75534\",\"#f9140a\",\"#d70315\",\"#b10026\"]},\"13\":{\"afd8bf06-297f-403e-b1e0-23ed96ec141a\":[\"#f7fbff\",\"#cfe0f9\",\"#a6c6f3\",\"#77aded\",\"#3295e6\",\"#287ac6\",\"#1e60a6\",\"#144888\",\"#08306b\"]},\"17\":{\"afd8bf06-297f-403e-b1e0-23ed96ec141a\":[\"#ffffe5\",\"#d5f0ca\",\"#abe1af\",\"#7dd295\",\"#46c27b\",\"#34a165\",\"#238150\",\"#11623c\",\"#004529\"]},\"26\":{\"afd8bf06-297f-403e-b1e0-23ed96ec141a\":[\"#f7f4f9\",\"#f5cfec\",\"#f1aadf\",\"#eb83d2\",\"#e356c5\",\"#c44198\",\"#a52c6d\",\"#861744\",\"#67001f\"]},\"36\":{\"afd8bf06-297f-403e-b1e0-23ed96ec141a\":[\"#ffffd9\",\"#d7f1da\",\"#abe2db\",\"#78d4db\",\"#1ac5db\",\"#2397b9\",\"#226c97\",\"#194377\",\"#081d58\"]},\"37\":{\"afd8bf06-297f-403e-b1e0-23ed96ec141a\":[\"#fff5f0\",\"#fee0d2\",\"#fcbba1\",\"#fc9272\",\"#fb6a4a\",\"#ef3b2c\",\"#cb181d\",\"#a50f15\",\"#67000d\"]},\"39\":{\"afd8bf06-297f-403e-b1e0-23ed96ec141a\":[\"#fcfbfd\",\"#e6d0f8\",\"#cda6f3\",\"#b27ced\",\"#9450e6\",\"#7e3dcb\",\"#692bb0\",\"#541796\",\"#3f007d\"]},\"42\":{\"afd8bf06-297f-403e-b1e0-23ed96ec141a\":[\"#ffffb2\",\"#fddd87\",\"#fba35d\",\"#f75534\",\"#f9140a\",\"#d70315\",\"#b10026\"]},\"48\":{\"afd8bf06-297f-403e-b1e0-23ed96ec141a\":[\"#f7fbff\",\"#cfe0f9\",\"#a6c6f3\",\"#77aded\",\"#3295e6\",\"#287ac6\",\"#1e60a6\",\"#144888\",\"#08306b\"]},\"6c04197f-10ee-41e9-a58c-8684fe0c4c6f\":{\"afd8bf06-297f-403e-b1e0-23ed96ec141a\":[\"#ffffb2\",\"#fddd87\",\"#fba35d\",\"#f75534\",\"#f9140a\",\"#d70315\",\"#b10026\"]}},\"dataLabels\":true,\"seriesColors\":{},\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"924936e0-3f30-4733-8b31-6138fce8354a\":{\"linkedColumns\":[\"6c04197f-10ee-41e9-a58c-8684fe0c4c6f\"],\"axisType\":\"Y\",\"isOpposite\":false},\"c0fb585b-c46b-4496-a00a-8bda606d557c\":{\"linkedColumns\":[\"afd8bf06-297f-403e-b1e0-23ed96ec141a\"],\"axisType\":\"X\"}},\"version\":\"V2.1\",\"columnProperties\":{\"afd8bf06-297f-403e-b1e0-23ed96ec141a\":{\"dataLabels\":true},\"State FIPS Code\":{\"dataLabels\":true},\"6c04197f-10ee-41e9-a58c-8684fe0c4c6f\":{\"dataLabels\":true}}}"
-    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"State FIPS Code\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"County\",\"columnProperty\": {}},{\"columnId\": \"County FIPS Code\",\"columnProperty\": {}},{\"columnId\": \"Total Poverty Estimate\",\"columnProperty\": {}},{\"columnId\": \"County Full FIPS Code\",\"columnProperty\": {}},{\"columnId\": \"State\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"33b28d45-7a3c-403b-b787-49ca2db8384e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Poverty Estimate\"],\"isOpposite\": false}},{\"id\": \"64eaae2d-4766-4361-9970-e02b9fd3e3ff\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"State FIPS Code\"]}}],\"systemMultiColorSeriesColors\": [{\"serieName\": \"6\",\"colorMap\": [{\"serieName\": \"afd8bf06-297f-403e-b1e0-23ed96ec141a\",\"color\": [\"#ffffe5\",\"#d5f0ca\",\"#abe1af\",\"#7dd295\",\"#46c27b\",\"#34a165\",\"#238150\",\"#11623c\",\"#004529\"]}]},{\"serieName\": \"12\",\"colorMap\": [{\"serieName\": \"afd8bf06-297f-403e-b1e0-23ed96ec141a\",\"color\": [\"#ffffb2\",\"#fddd87\",\"#fba35d\",\"#f75534\",\"#f9140a\",\"#d70315\",\"#b10026\"]}]},{\"serieName\": \"13\",\"colorMap\": [{\"serieName\": \"afd8bf06-297f-403e-b1e0-23ed96ec141a\",\"color\": [\"#f7fbff\",\"#cfe0f9\",\"#a6c6f3\",\"#77aded\",\"#3295e6\",\"#287ac6\",\"#1e60a6\",\"#144888\",\"#08306b\"]}]},{\"serieName\": \"17\",\"colorMap\": [{\"serieName\": \"afd8bf06-297f-403e-b1e0-23ed96ec141a\",\"color\": [\"#ffffe5\",\"#d5f0ca\",\"#abe1af\",\"#7dd295\",\"#46c27b\",\"#34a165\",\"#238150\",\"#11623c\",\"#004529\"]}]},{\"serieName\": \"26\",\"colorMap\": [{\"serieName\": \"afd8bf06-297f-403e-b1e0-23ed96ec141a\",\"color\": [\"#f7f4f9\",\"#f5cfec\",\"#f1aadf\",\"#eb83d2\",\"#e356c5\",\"#c44198\",\"#a52c6d\",\"#861744\",\"#67001f\"]}]},{\"serieName\": \"36\",\"colorMap\": [{\"serieName\": \"afd8bf06-297f-403e-b1e0-23ed96ec141a\",\"color\": [\"#ffffd9\",\"#d7f1da\",\"#abe2db\",\"#78d4db\",\"#1ac5db\",\"#2397b9\",\"#226c97\",\"#194377\",\"#081d58\"]}]},{\"serieName\": \"37\",\"colorMap\": [{\"serieName\": \"afd8bf06-297f-403e-b1e0-23ed96ec141a\",\"color\": [\"#fff5f0\",\"#fee0d2\",\"#fcbba1\",\"#fc9272\",\"#fb6a4a\",\"#ef3b2c\",\"#cb181d\",\"#a50f15\",\"#67000d\"]}]},{\"serieName\": \"39\",\"colorMap\": [{\"serieName\": \"afd8bf06-297f-403e-b1e0-23ed96ec141a\",\"color\": [\"#fcfbfd\",\"#e6d0f8\",\"#cda6f3\",\"#b27ced\",\"#9450e6\",\"#7e3dcb\",\"#692bb0\",\"#541796\",\"#3f007d\"]}]},{\"serieName\": \"42\",\"colorMap\": [{\"serieName\": \"afd8bf06-297f-403e-b1e0-23ed96ec141a\",\"color\": [\"#ffffb2\",\"#fddd87\",\"#fba35d\",\"#f75534\",\"#f9140a\",\"#d70315\",\"#b10026\"]}]},{\"serieName\": \"48\",\"colorMap\": [{\"serieName\": \"afd8bf06-297f-403e-b1e0-23ed96ec141a\",\"color\": [\"#f7fbff\",\"#cfe0f9\",\"#a6c6f3\",\"#77aded\",\"#3295e6\",\"#287ac6\",\"#1e60a6\",\"#144888\",\"#08306b\"]}]},{\"serieName\": \"6c04197f-10ee-41e9-a58c-8684fe0c4c6f\",\"colorMap\": [{\"serieName\": \"afd8bf06-297f-403e-b1e0-23ed96ec141a\",\"color\": [\"#ffffb2\",\"#fddd87\",\"#fba35d\",\"#f75534\",\"#f9140a\",\"#d70315\",\"#b10026\"]}]},{\"serieName\": \"Total Poverty Estimate\",\"colorMap\": [{\"serieName\": \"State FIPS Code\",\"color\": [\"#ffffb2\",\"#fddd87\",\"#fba35d\",\"#f75534\",\"#f9140a\",\"#d70315\",\"#b10026\"]}]}]}"
+    client_stateada_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"State FIPS Code\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"County\",\"columnProperty\": {}},{\"columnId\": \"County FIPS Code\",\"columnProperty\": {}},{\"columnId\": \"Total Poverty Estimate\",\"columnProperty\": {}},{\"columnId\": \"County Full FIPS Code\",\"columnProperty\": {}},{\"columnId\": \"State\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"33b28d45-7a3c-403b-b787-49ca2db8384e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Poverty Estimate\"],\"isOpposite\": false}},{\"id\": \"64eaae2d-4766-4361-9970-e02b9fd3e3ff\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"State FIPS Code\"]}}],\"systemMultiColorSeriesColors\": [{\"serieName\": \"6\",\"colorMap\": [{\"serieName\": \"afd8bf06-297f-403e-b1e0-23ed96ec141a\",\"color\": [\"#ffffe5\",\"#d5f0ca\",\"#abe1af\",\"#7dd295\",\"#46c27b\",\"#34a165\",\"#238150\",\"#11623c\",\"#004529\"]}]},{\"serieName\": \"12\",\"colorMap\": [{\"serieName\": \"afd8bf06-297f-403e-b1e0-23ed96ec141a\",\"color\": [\"#ffffb2\",\"#fddd87\",\"#fba35d\",\"#f75534\",\"#f9140a\",\"#d70315\",\"#b10026\"]}]},{\"serieName\": \"13\",\"colorMap\": [{\"serieName\": \"afd8bf06-297f-403e-b1e0-23ed96ec141a\",\"color\": [\"#f7fbff\",\"#cfe0f9\",\"#a6c6f3\",\"#77aded\",\"#3295e6\",\"#287ac6\",\"#1e60a6\",\"#144888\",\"#08306b\"]}]},{\"serieName\": \"17\",\"colorMap\": [{\"serieName\": \"afd8bf06-297f-403e-b1e0-23ed96ec141a\",\"color\": [\"#ffffe5\",\"#d5f0ca\",\"#abe1af\",\"#7dd295\",\"#46c27b\",\"#34a165\",\"#238150\",\"#11623c\",\"#004529\"]}]},{\"serieName\": \"26\",\"colorMap\": [{\"serieName\": \"afd8bf06-297f-403e-b1e0-23ed96ec141a\",\"color\": [\"#f7f4f9\",\"#f5cfec\",\"#f1aadf\",\"#eb83d2\",\"#e356c5\",\"#c44198\",\"#a52c6d\",\"#861744\",\"#67001f\"]}]},{\"serieName\": \"36\",\"colorMap\": [{\"serieName\": \"afd8bf06-297f-403e-b1e0-23ed96ec141a\",\"color\": [\"#ffffd9\",\"#d7f1da\",\"#abe2db\",\"#78d4db\",\"#1ac5db\",\"#2397b9\",\"#226c97\",\"#194377\",\"#081d58\"]}]},{\"serieName\": \"37\",\"colorMap\": [{\"serieName\": \"afd8bf06-297f-403e-b1e0-23ed96ec141a\",\"color\": [\"#fff5f0\",\"#fee0d2\",\"#fcbba1\",\"#fc9272\",\"#fb6a4a\",\"#ef3b2c\",\"#cb181d\",\"#a50f15\",\"#67000d\"]}]},{\"serieName\": \"39\",\"colorMap\": [{\"serieName\": \"afd8bf06-297f-403e-b1e0-23ed96ec141a\",\"color\": [\"#fcfbfd\",\"#e6d0f8\",\"#cda6f3\",\"#b27ced\",\"#9450e6\",\"#7e3dcb\",\"#692bb0\",\"#541796\",\"#3f007d\"]}]},{\"serieName\": \"42\",\"colorMap\": [{\"serieName\": \"afd8bf06-297f-403e-b1e0-23ed96ec141a\",\"color\": [\"#ffffb2\",\"#fddd87\",\"#fba35d\",\"#f75534\",\"#f9140a\",\"#d70315\",\"#b10026\"]}]},{\"serieName\": \"48\",\"colorMap\": [{\"serieName\": \"afd8bf06-297f-403e-b1e0-23ed96ec141a\",\"color\": [\"#f7fbff\",\"#cfe0f9\",\"#a6c6f3\",\"#77aded\",\"#3295e6\",\"#287ac6\",\"#1e60a6\",\"#144888\",\"#08306b\"]}]},{\"serieName\": \"6c04197f-10ee-41e9-a58c-8684fe0c4c6f\",\"colorMap\": [{\"serieName\": \"afd8bf06-297f-403e-b1e0-23ed96ec141a\",\"color\": [\"#ffffb2\",\"#fddd87\",\"#fba35d\",\"#f75534\",\"#f9140a\",\"#d70315\",\"#b10026\"]}]},{\"serieName\": \"Total Poverty Estimate\",\"colorMap\": [{\"serieName\": \"State FIPS Code\",\"color\": [\"#ffffb2\",\"#fddd87\",\"#fba35d\",\"#f75534\",\"#f9140a\",\"#d70315\",\"#b10026\"]}]}]}"
   display_mode: CHART_MODE
