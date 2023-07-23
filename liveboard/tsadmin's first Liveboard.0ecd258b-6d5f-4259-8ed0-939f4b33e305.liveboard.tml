@@ -1,0 +1,50 @@
+guid: 0ecd258b-6d5f-4259-8ed0-939f4b33e305
+liveboard:
+  name: tsadmin's first Liveboard
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: "Total Tax by Type, Size, Brand1"
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Tax] [Type] [Size] [Brand1]"
+      answer_columns:
+      - name: Total Tax
+      - name: Type
+      - name: Size
+      - name: Brand1
+      table:
+        table_columns:
+        - column_id: Type
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Size
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Brand1
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Tax
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Type
+        - Size
+        - Brand1
+        - Total Tax
+        client_state: ""
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Type
+        - column_id: Size
+        - column_id: Brand1
+        - column_id: Total Tax
+        axis_configs:
+        - x:
+          - Brand1
+          "y":
+          - Total Tax
+          color:
+          - Size
+        client_state: ""
+      display_mode: TABLE_MODE
+    viz_guid: 7eb1eaba-5ab3-4a80-b0f3-0b0f9b33698c
