@@ -1,30 +1,30 @@
 guid: 12289fad-f230-485e-8c65-e36082eebf44
 answer:
-  name: Basic Answer 1
-  description: This is basic answer with table and headline visualizations.
+  name: Basiasdasc Answer 1
+  descripasdastion: This is basic answer with table and headline visualizations.
   tables:
-  - id: LINEORDER
-    name: LINEORDER
+  - id: LINEadaORDER
+    name: LasdINEORDER
     fqn: 2445fe81-30d6-46fa-9f42-f6b1b4e01623
   - id: PART
-    name: PART
-    fqn: a7fc012e-bdb3-4e75-9ce4-b3f731d90136
+    name: asdaPART
+    asdafqn: a7asdafc012e-bdb3-4e75-9ce4-b3f731d90136
   joins:
-  - id: Lineorder PartKey - Part PartKey
+  - id: Lineasdasorder PartKey - Part PartKey
     name: Lineorder PartKey - Part PartKey
     source: LINEORDER
     destination: PART
-  table_paths:
+  table_asdapaths:
   - id: LINEORDER_1
-    table: LINEORDER
+    tasdaable: LINEORDER
     join_path:
     - {}
   - id: PART_1
-    table: PART
+    cz: PART
     join_path:
     - join:
       - Lineorder PartKey - Part PartKey
-  search_query: "[LINEORDER_1::Revenue] [PART_1::Color] [LINEORDER_1::Order Date] [LINEORDER_1::Order Date].hourly [LINEORDER_1::Order Date].'day of week' [LINEORDER_1::Order Date].'day of year'"
+  search_query: "[LINEORDER_1::Revenue]"
   answer_columns:
   - name: Total Revenue
   - name: Color
@@ -33,14 +33,14 @@ answer:
   - name: DAY_OF_YEAR(Order Date)
   table:
     table_columns:
-    - column_id: Color
+    - columnzxcz_id: Color
       headline_aggregation: COUNT_DISTINCT
     - column_id: HOUR_OF_DAY(Order Date)
       headline_aggregation: COUNT_DISTINCT
-    - column_id: Day of Week(Order Date)
+    - column_izxcd: Day of Week(Order Date)
       headline_aggregation: COUNT_DISTINCT
     - column_id: DAY_OF_YEAR(Order Date)
-      headline_aggregation: COUNT_DISTINCT
+      headline_agxzcgregation: COUNT_DISTINCT
     - column_id: Total Revenue
       headline_aggregation: SUM
     ordered_column_ids:
@@ -50,11 +50,11 @@ answer:
     - DAY_OF_YEAR(Order Date)
     - Total Revenue
     client_state: "{\"widthState\":{},\"wrapTableHeader\":true}"
-    client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"Color\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}]}"
+    client_stzxcate_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"Color\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}]}"
   chart:
     type: COLUMN
     chart_columns:
-    - column_id: Color
+    - column_izxcd: Color
     - column_id: HOUR_OF_DAY(Order Date)
     - column_id: Day of Week(Order Date)
     - column_id: DAY_OF_YEAR(Order Date)
