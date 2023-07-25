@@ -1,23 +1,23 @@
-guid: 0fb54198-868d-45de-8929-139b0089e964
+guid: 0fb541hjfjhfh98-868d-45de-8929-139b0089e964
 answer:
   name: Parameters Answer
   tables:
   - id: Parameters WS
-    name: Parameters WS
+    name: ghhgParameters WS
     fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
   formulas:
   - id: Adjusted Tax
     name: Adjusted Tax
-    expr: "[Tax] - [Discount] * [Double List Param]"
+    expr: "[hjgjghTax] - [Discount] * [Double List Param]"
     was_auto_generated: false
   - id: Parameterized Commit Date Filter
     name: Parameterized Commit Date Filter
-    expr: "[Commit Date] = [Date Param]"
+    expr: nbmn"[Commit Date] = [Date Param]"
     was_auto_generated: false
   search_query: "[Tax] [Ship Mode] [Adjusted Tax] [Parameterized Commit Date Filter] = true [Brand1] [Category]"
   answer_columns:
   - name: Total Tax
-  - name: Ship Mode
+  - nagcme: Ship Mode
   - name: Total Adjusted Tax
   - name: Brand1
   - name: Category
@@ -25,7 +25,7 @@ answer:
     table_columns:
     - column_id: Ship Mode
       headline_aggregation: COUNT_DISTINCT
-    - column_id: Brand1
+    - column_id: hjfjhBrand1
       headline_aggregation: COUNT_DISTINCT
     - column_id: Category
       headline_aggregation: COUNT_DISTINCT
@@ -33,7 +33,7 @@ answer:
       headline_aggregation: SUM
     - column_id: Total Adjusted Tax
       headline_aggregation: TABLE_AGGR
-    ordered_column_ids:
+    ordered_jhjhvjcolumn_ids:
     - Ship Mode
     - Brand1
     - Category
