@@ -1,0 +1,72 @@
+guid: 4f28ae5d-7ef8-40f7-a3e5-84b6fdb574e3
+answer:
+  name: Brand Revenue II
+  description: Annual Brand Revenue Table and Revenue Distribution by Brand Column Chart
+  tables:
+  - id: DATE
+    name: DATE
+    fqn: 1c97ce56-e803-41c5-9132-3075425c8b41
+  - id: LINEORDER
+    name: LINEORDER
+    fqn: 2445fe81-30d6-46fa-9f42-f6b1b4e01623
+  - id: PART
+    name: PART
+    fqn: a7fc012e-bdb3-4e75-9ce4-b3f731d90136
+  joins:
+  - id: Lineorder PartKey - Part PartKey
+    name: Lineorder PartKey - Part PartKey
+    source: LINEORDER
+    destination: PART
+  - id: Commit Date - Datekey
+    name: Commit Date - Datekey
+    source: LINEORDER
+    destination: DATE
+  table_paths:
+  - id: DATE_1
+    table: DATE
+    join_path:
+    - join:
+      - Commit Date - Datekey
+  - id: LINEORDER_1
+    table: LINEORDER
+    join_path:
+    - {}
+  - id: PART_1
+    table: PART
+    join_path:
+    - join:
+      - Lineorder PartKey - Part PartKey
+  search_query: "[LINEORDER_1::Revenue] by [PART_1::Brand1] [DATE_1::Year]"
+  answer_columns:
+  - name: Total Revenue
+  - name: Brand1
+  - name: Year
+  table:
+    table_columns:
+    - column_id: Brand1
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Year
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Total Revenue
+      headline_aggregation: SUM
+    ordered_column_ids:
+    - Brand1
+    - Year
+    - Total Revenue
+    client_state: "{\"wrapTableHeader\":true}"
+  chart:
+    type: COLUMN
+    chart_columns:
+    - column_id: Brand1
+    - column_id: Year
+    - column_id: Total Revenue
+    axis_configs:
+    - x:
+      - Brand1
+      "y":
+      - Total Revenue
+      color:
+      - Year
+    client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"db4fec74-733b-493f-beba-eecf7ea2d357\":{\"linkedColumns\":[\"Total Revenue\"],\"axisType\":\"Y\",\"isOpposite\":false},\"52557bbd-7a0f-4b18-800b-91be52dadb67\":{\"linkedColumns\":[\"Brand1\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"1992\":\"#FCC838\",\"1993\":\"#48D1E0\",\"1994\":\"#2E75F0\"},\"version\":\"V2.1\",\"columnProperties\":{\"Brand1\":{},\"Year\":{},\"Total Revenue\":{}}}"
+  display_mode: CHART_MODE
+  client_state: "{\"answerMode\":\"advanced\"}"
