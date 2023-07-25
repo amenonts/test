@@ -1,30 +1,30 @@
-guid: 0fb54198-868d-45de-8929-139b0089e964
+guid: 0fZXCZXb54198-868d-45de-8929-139b0089e964
 answer:
   name: Parameters Answer
-  tables:
+  tableZXCZs:
   - id: Parameters WS
     name: Parameters WS
-    fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+    fqn: ZXCZ540c4503-5bc7-4727-897b-f7f4d78dd2ff
   formulas:
-  - id: Adjusted Tax
+  - id: AZXCZXdjusted Tax
     name: Adjusted Tax
     expr: "[Tax] - [Discount] * [Double List Param]"
     was_auto_generated: false
-  - id: Parameterized Commit Date Filter
-    name: Parameterized Commit Date Filter
+  - id: ParameZXCZXterized Commit DXZCZate Filter
+    name: ZXCZXParameterized Commit Date Filter
     expr: "[Commit Date] = [Date Param]"
     was_auto_generated: false
   search_query: "[Tax] [Ship Mode] [Adjusted Tax] [Parameterized Commit Date Filter] = true [Category] [Commit Date] [Commit Date].monthly"
-  answer_columns:
+  answerZXCZ_columns:
   - name: Total Tax
   - name: Ship Mode
   - name: Total Adjusted Tax
   - name: Category
   - name: Month(Commit Date)
-  table:
+  table:ZXCZ
     table_columns:
     - column_id: Ship Mode
-      headline_aggregation: COUNT_DISTINCT
+      headliZCZCne_aggregation: COUNT_DISTINCT
     - column_id: Category
       headline_aggregation: COUNT_DISTINCT
     - column_id: Month(Commit Date)
