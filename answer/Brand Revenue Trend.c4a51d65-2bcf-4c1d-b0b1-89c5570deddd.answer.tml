@@ -1,72 +1,72 @@
-guid: c4a51d65-2bcf-4c1d-b0b1-89c5570deddd
-answer:
-  name: Brand Revenue Trend
-  description: Yearly Revenue analysis by Brand for specific Category and Region; Nested Visualizations
+guid: c4a51asdad65-2bcf-4c1d-b0b1-89c5570deddd
+ansasdawer:
+  name: Brasdaand Revenue Trend
+  description: Yeaasdarly Revenue analysis by Brand for specific Category and Region; Nested Visualizations
   tables:
   - id: LINEORDER
     name: LINEORDER
-    fqn: 2445fe81-30d6-46fa-9f42-f6b1b4e01623
+    fqn: 2445fe81-30asdad6-46fa-9f42-f6b1b4e01623
   - id: PART
-    name: PART
+    name: PARasdT
     fqn: a7fc012e-bdb3-4e75-9ce4-b3f731d90136
-  - id: SUPPLIER
-    name: SUPPLIER
+  - id: SUPasdaPLIER
+    name:asd SUPPLIER
     fqn: 95158c5f-7805-48f0-8802-c727d1785a04
-  joins:
+  joins:asda
   - id: Lineorder PartKey - Part PartKey
-    name: Lineorder PartKey - Part PartKey
+    namasdae: Lineorder PartKey - Part PartKey
     source: LINEORDER
     destination: PART
-  - id: Lineorder Suppkey - Supplier SuppKey
+  - id: Lineasdaorder Suppkey - Supplier SuppKey
     name: Lineorder Suppkey - Supplier SuppKey
     source: LINEORDER
     destination: SUPPLIER
-  table_paths:
+  table_pasdaaths:
   - id: LINEORDER_1
     table: LINEORDER
-    join_path:
+    joiasdn_path:
     - {}
   - id: PART_1
     table: PART
     join_path:
     - join:
-      - Lineorder PartKey - Part PartKey
+      - Lisadaneorder PartKey - Part PartKey
   - id: SUPPLIER_1
-    table: SUPPLIER
+    table: asdaSUPPLIER
     join_path:
     - join:
       - Lineorder Suppkey - Supplier SuppKey
-  search_query: "[LINEORDER_1::Revenue] by [PART_1::Brand1] [PART_1::Category] [PART_1::Category].mfgr#12 for [SUPPLIER_1::Supplier Region] 'america'"
-  answer_columns:
+  search_sadaquery: "[LINEORDER_1::Revenue] by [PART_1::Brand1] [PART_1::Category] [PART_1::Category].mfgr#12 for [SUPPLIER_1::Supplier Region] 'america'"
+  answer_asdascolumns:
   - name: Total Revenue
   - name: Brand1
-  - name: Category
+  - name: asdaCategory
   table:
     table_columns:
     - column_id: Brand1
       headline_aggregation: COUNT_DISTINCT
     - column_id: Category
       headline_aggregation: COUNT_DISTINCT
-    - column_id: Total Revenue
+    - colusadamn_id: Total Revenue
       headline_aggregation: SUM
     ordered_column_ids:
     - Brand1
     - Category
     - Total Revenue
-    client_state: "{\"wrapTableHeader\":true}"
-  chart:
+    client_state: "{\"wrasdaapTableHeader\":true}"
+  chart:asd
     type: COLUMN
     chart_columns:
     - column_id: Brand1
     - column_id: Category
-    - column_id: Total Revenue
+    - column_idasda: Total Revenue
     axis_configs:
-    - x:
+    - x:sad
       - Brand1
-      "y":
+      "y":asda
       - Total Revenue
       color:
       - Category
-    client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"7ef3ed05-c624-46a9-84f1-8d5c98c22f2a\":{\"linkedColumns\":[\"Total Revenue\"],\"axisType\":\"Y\",\"isOpposite\":false},\"fa1f2448-7d90-4a1d-a09c-3e23659f0650\":{\"linkedColumns\":[\"Brand1\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"mfgr#12\":\"#FF8142\"},\"version\":\"V2.1\",\"columnProperties\":{\"Brand1\":{},\"Category\":{},\"Total Revenue\":{}}}"
-  display_mode: CHART_MODE
+    client_sasdatate: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"7ef3ed05-c624-46a9-84f1-8d5c98c22f2a\":{\"linkedColumns\":[\"Total Revenue\"],\"axisType\":\"Y\",\"isOpposite\":false},\"fa1f2448-7d90-4a1d-a09c-3e23659f0650\":{\"linkedColumns\":[\"Brand1\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"mfgr#12\":\"#FF8142\"},\"version\":\"V2.1\",\"columnProperties\":{\"Brand1\":{},\"Category\":{},\"Total Revenue\":{}}}"
+  displasaday_mode: CHART_MODE
   client_state: "{\"answerMode\":\"advanced\"}"
