@@ -1,72 +1,104 @@
-guid: c4a51asdad65-2bcf-4c1d-b0b1-89c5570deddd
-ansasdawer:
-  name: Brasdaand Revenue Trend
-  description: Yeaasdarly Revenue analysis by Brand for specific Category and Region; Nested Visualizations
+guid: c4a51d65-2bcf-4c1d-b0b1-89c5570deddd
+answer:
+  name: Brand Revenue Trend
+  description: Yearly Revenue analysis by Brand for specific Category and Region; Nested Visualizations
   tables:
   - id: LINEORDER
     name: LINEORDER
-    fqn: 2445fe81-30asdad6-46fa-9f42-f6b1b4e01623
+    fqn: 2445fe81-30d6-46fa-9f42-f6b1b4e01623
   - id: PART
-    name: PARasdT
+    name: PART
     fqn: a7fc012e-bdb3-4e75-9ce4-b3f731d90136
-  - id: SUPasdaPLIER
-    name:asd SUPPLIER
+  - id: SUPPLIER
+    name: SUPPLIER
     fqn: 95158c5f-7805-48f0-8802-c727d1785a04
-  joins:asda
+  joins:
   - id: Lineorder PartKey - Part PartKey
-    namasdae: Lineorder PartKey - Part PartKey
+    name: Lineorder PartKey - Part PartKey
     source: LINEORDER
     destination: PART
-  - id: Lineasdaorder Suppkey - Supplier SuppKey
+  - id: Lineorder Suppkey - Supplier SuppKey
     name: Lineorder Suppkey - Supplier SuppKey
     source: LINEORDER
     destination: SUPPLIER
-  table_pasdaaths:
+  table_paths:
   - id: LINEORDER_1
     table: LINEORDER
-    joiasdn_path:
+    join_path:
     - {}
   - id: PART_1
     table: PART
     join_path:
     - join:
-      - Lisadaneorder PartKey - Part PartKey
+      - Lineorder PartKey - Part PartKey
   - id: SUPPLIER_1
-    table: asdaSUPPLIER
+    table: SUPPLIER
     join_path:
     - join:
       - Lineorder Suppkey - Supplier SuppKey
-  search_sadaquery: "[LINEORDER_1::Revenue] by [PART_1::Brand1] [PART_1::Category] [PART_1::Category].mfgr#12 for [SUPPLIER_1::Supplier Region] 'america'"
-  answer_asdascolumns:
+  search_query: "[LINEORDER_1::Revenue] by [PART_1::Brand1] [PART_1::Category] [PART_1::Category].mfgr#12 for [SUPPLIER_1::Supplier Region] 'america' [PART_1::Container] [PART_1::Part Name] [SUPPLIER_1::Supplier City] [SUPPLIER_1::Supplier Name] [SUPPLIER_1::Supplier Phone] [PART_1::Size]"
+  answer_columns:
   - name: Total Revenue
   - name: Brand1
-  - name: asdaCategory
+  - name: Category
+  - name: Container
+  - name: Part Name
+  - name: Supplier City
+  - name: Supplier Name
+  - name: Supplier Phone
+  - name: Size
   table:
     table_columns:
     - column_id: Brand1
       headline_aggregation: COUNT_DISTINCT
     - column_id: Category
       headline_aggregation: COUNT_DISTINCT
-    - colusadamn_id: Total Revenue
+    - column_id: Container
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Part Name
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Supplier City
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Supplier Name
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Supplier Phone
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Size
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Total Revenue
       headline_aggregation: SUM
     ordered_column_ids:
     - Brand1
     - Category
+    - Container
+    - Part Name
+    - Supplier City
+    - Supplier Name
+    - Supplier Phone
+    - Size
     - Total Revenue
-    client_state: "{\"wrasdaapTableHeader\":true}"
-  chart:asd
+    client_state: "{\"wrapTableHeader\":true}"
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"Brand1\",\"columnProperty\": {}},{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}]}"
+  chart:
     type: COLUMN
     chart_columns:
     - column_id: Brand1
     - column_id: Category
-    - column_idasda: Total Revenue
+    - column_id: Container
+    - column_id: Part Name
+    - column_id: Supplier City
+    - column_id: Supplier Name
+    - column_id: Supplier Phone
+    - column_id: Size
+    - column_id: Total Revenue
     axis_configs:
-    - x:sad
+    - x:
       - Brand1
-      "y":asda
+      "y":
       - Total Revenue
       color:
       - Category
-    client_sasdatate: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"7ef3ed05-c624-46a9-84f1-8d5c98c22f2a\":{\"linkedColumns\":[\"Total Revenue\"],\"axisType\":\"Y\",\"isOpposite\":false},\"fa1f2448-7d90-4a1d-a09c-3e23659f0650\":{\"linkedColumns\":[\"Brand1\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"mfgr#12\":\"#FF8142\"},\"version\":\"V2.1\",\"columnProperties\":{\"Brand1\":{},\"Category\":{},\"Total Revenue\":{}}}"
-  displasaday_mode: CHART_MODE
+    client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"7ef3ed05-c624-46a9-84f1-8d5c98c22f2a\":{\"linkedColumns\":[\"Total Revenue\"],\"axisType\":\"Y\",\"isOpposite\":false},\"fa1f2448-7d90-4a1d-a09c-3e23659f0650\":{\"linkedColumns\":[\"Brand1\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"mfgr#12\":\"#FF8142\"},\"version\":\"V2.1\",\"columnProperties\":{\"Brand1\":{},\"Category\":{},\"Total Revenue\":{}}}"
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Brand1\",\"columnProperty\": {}},{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}},{\"columnId\": \"Container\",\"columnProperty\": {}},{\"columnId\": \"Part Name\",\"columnProperty\": {}},{\"columnId\": \"Supplier City\",\"columnProperty\": {}},{\"columnId\": \"Supplier Name\",\"columnProperty\": {}},{\"columnId\": \"Supplier Phone\",\"columnProperty\": {}},{\"columnId\": \"Size\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"7ef3ed05-c624-46a9-84f1-8d5c98c22f2a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"fa1f2448-7d90-4a1d-a09c-3e23659f0650\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Brand1\"]}}],\"systemSeriesColors\": [{\"serieName\": \"mfgr#12\",\"color\": \"#FF8142\"}]}"
+  display_mode: CHART_MODE
   client_state: "{\"answerMode\":\"advanced\"}"
