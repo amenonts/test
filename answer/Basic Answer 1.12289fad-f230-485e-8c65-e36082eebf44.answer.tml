@@ -1,69 +1,74 @@
 guid: 12289fad-f230-485e-8c65-e36082eebf44
 answer:
-  name: Basiasdasc Answer 1
-  descripasdastion: This is basic answer with table and headline visualizations.
+  name: Basic Answer 1
+  description: This is basic answer with table and headline visualizations.
   tables:
-  - id: LINEadaORDER
-    name: LasdINEORDER
+  - id: LINEORDER
+    name: LINEORDER
     fqn: 2445fe81-30d6-46fa-9f42-f6b1b4e01623
   - id: PART
-    name: asdaPART
-    asdafqn: a7asdafc012e-bdb3-4e75-9ce4-b3f731d90136
+    name: PART
+    fqn: a7fc012e-bdb3-4e75-9ce4-b3f731d90136
   joins:
-  - id: Lineasdasorder PartKey - Part PartKey
+  - id: Lineorder PartKey - Part PartKey
     name: Lineorder PartKey - Part PartKey
     source: LINEORDER
     destination: PART
-  table_asdapaths:
+  table_paths:
   - id: LINEORDER_1
-    tasdaable: LINEORDER
+    table: LINEORDER
     join_path:
     - {}
   - id: PART_1
-    cz: PART
+    table: PART
     join_path:
     - join:
       - Lineorder PartKey - Part PartKey
-  search_query: "[LINEORDER_1::Revenue]"
+  search_query: "[LINEORDER_1::Revenue] [PART_1::Color] [LINEORDER_1::Commit Date] [LINEORDER_1::Commit Date].quarterly [LINEORDER_1::Discount] [PART_1::Manufacturer] [PART_1::Category]"
   answer_columns:
   - name: Total Revenue
   - name: Color
-  - name: HOUR_OF_DAY(Order Date)
-  - name: Day of Week(Order Date)
-  - name: DAY_OF_YEAR(Order Date)
+  - name: Quarter(Commit Date)
+  - name: Total Discount
+  - name: Manufacturer
+  - name: Category
   table:
     table_columns:
-    - columnzxcz_id: Color
+    - column_id: Color
       headline_aggregation: COUNT_DISTINCT
-    - column_id: HOUR_OF_DAY(Order Date)
+    - column_id: Quarter(Commit Date)
+      headline_aggregation: MIN-MAX
+    - column_id: Manufacturer
       headline_aggregation: COUNT_DISTINCT
-    - column_izxcd: Day of Week(Order Date)
+    - column_id: Category
       headline_aggregation: COUNT_DISTINCT
-    - column_id: DAY_OF_YEAR(Order Date)
-      headline_agxzcgregation: COUNT_DISTINCT
     - column_id: Total Revenue
+      headline_aggregation: SUM
+    - column_id: Total Discount
       headline_aggregation: SUM
     ordered_column_ids:
     - Color
-    - HOUR_OF_DAY(Order Date)
-    - Day of Week(Order Date)
-    - DAY_OF_YEAR(Order Date)
+    - Quarter(Commit Date)
+    - Manufacturer
+    - Category
     - Total Revenue
+    - Total Discount
     client_state: "{\"widthState\":{},\"wrapTableHeader\":true}"
-    client_stzxcate_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"Color\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}]}"
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"Color\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}]}"
   chart:
     type: COLUMN
     chart_columns:
-    - column_izxcd: Color
-    - column_id: HOUR_OF_DAY(Order Date)
-    - column_id: Day of Week(Order Date)
-    - column_id: DAY_OF_YEAR(Order Date)
+    - column_id: Color
+    - column_id: Quarter(Commit Date)
+    - column_id: Manufacturer
+    - column_id: Category
     - column_id: Total Revenue
+    - column_id: Total Discount
     axis_configs:
     - x:
       - Color
       "y":
       - Total Revenue
     client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"32286644-696b-417a-ada7-11a9a350df17\":{\"linkedColumns\":[\"Total Revenue\"],\"axisType\":\"Y\",\"isOpposite\":false},\"d3525ac6-c098-479a-a086-dfbde7919d6d\":{\"linkedColumns\":[\"Color\"],\"axisType\":\"X\"}},\"version\":\"V2.1\",\"columnProperties\":{\"Color\":{},\"Total Revenue\":{}}}"
-    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Color\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}},{\"columnId\": \"HOUR_OF_DAY(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Day of Week(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"DAY_OF_YEAR(Order Date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"32286644-696b-417a-ada7-11a9a350df17\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"d3525ac6-c098-479a-a086-dfbde7919d6d\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Color\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#FCC838\"}]}"
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Color\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}},{\"columnId\": \"Quarter(Commit Date)\",\"columnProperty\": {}},{\"columnId\": \"Manufacturer\",\"columnProperty\": {}},{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Total Discount\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"32286644-696b-417a-ada7-11a9a350df17\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"d3525ac6-c098-479a-a086-dfbde7919d6d\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Color\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#FCC838\"}]}"
   display_mode: CHART_MODE
