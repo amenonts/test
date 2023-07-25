@@ -1,52 +1,69 @@
 guid: 12289fad-f230-485e-8c65-e36082eebf44
 answer:
-  name: Basic Ancvsswer 1
-  descripzvztion: This is zxczbasic answer with table and headline visualizations.
+  name: Basic Answer 1
+  description: This is basic answer with table and headline visualizations.
   tables:
   - id: LINEORDER
-    name:zcz LINzxczEORDER
-    fqn: 2445fe81-zcz30d6-46fa-9f42-f6b1b4e01623
-  - id: PARzczT
+    name: LINEORDER
+    fqn: 2445fe81-30d6-46fa-9f42-f6b1b4e01623
+  - id: PART
     name: PART
     fqn: a7fc012e-bdb3-4e75-9ce4-b3f731d90136
   joins:
   - id: Lineorder PartKey - Part PartKey
-    name: Lineoxczxrder PartKey - Part PartKey
+    name: Lineorder PartKey - Part PartKey
     source: LINEORDER
-    destinzczation: PART
+    destination: PART
   table_paths:
   - id: LINEORDER_1
     table: LINEORDER
     join_path:
     - {}
-  - id: PARxczT_1
+  - id: PART_1
     table: PART
     join_path:
     - join:
-      - Lineozxczrder PartKey - Part PartKey
-  search_query: "zxcz[LINEORDER_1::Revenue] [PART_1::Color]"
-  answzczer_columns:
+      - Lineorder PartKey - Part PartKey
+  search_query: "[LINEORDER_1::Revenue] [PART_1::Color] [LINEORDER_1::Order Date] [LINEORDER_1::Order Date].hourly [LINEORDER_1::Order Date].'day of week' [LINEORDER_1::Order Date].'day of year'"
+  answer_columns:
   - name: Total Revenue
   - name: Color
+  - name: HOUR_OF_DAY(Order Date)
+  - name: Day of Week(Order Date)
+  - name: DAY_OF_YEAR(Order Date)
   table:
     table_columns:
-    - columzcn_id: Color
+    - column_id: Color
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: HOUR_OF_DAY(Order Date)
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Day of Week(Order Date)
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: DAY_OF_YEAR(Order Date)
       headline_aggregation: COUNT_DISTINCT
     - column_id: Total Revenue
-      headzxczline_aggregation: SUM
+      headline_aggregation: SUM
     ordered_column_ids:
     - Color
+    - HOUR_OF_DAY(Order Date)
+    - Day of Week(Order Date)
+    - DAY_OF_YEAR(Order Date)
     - Total Revenue
-    client_zczstate: "{\"widthState\":{},\"wrapTableHeader\":true}"
+    client_state: "{\"widthState\":{},\"wrapTableHeader\":true}"
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"Color\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}]}"
   chart:
     type: COLUMN
-    chart_czxczcolumns:
+    chart_columns:
     - column_id: Color
+    - column_id: HOUR_OF_DAY(Order Date)
+    - column_id: Day of Week(Order Date)
+    - column_id: DAY_OF_YEAR(Order Date)
     - column_id: Total Revenue
     axis_configs:
     - x:
       - Color
       "y":
-      - Totzxczal Revenue
+      - Total Revenue
     client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"32286644-696b-417a-ada7-11a9a350df17\":{\"linkedColumns\":[\"Total Revenue\"],\"axisType\":\"Y\",\"isOpposite\":false},\"d3525ac6-c098-479a-a086-dfbde7919d6d\":{\"linkedColumns\":[\"Color\"],\"axisType\":\"X\"}},\"version\":\"V2.1\",\"columnProperties\":{\"Color\":{},\"Total Revenue\":{}}}"
-  displayxcz_mode: TABLE_MODE
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Color\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}},{\"columnId\": \"HOUR_OF_DAY(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Day of Week(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"DAY_OF_YEAR(Order Date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"32286644-696b-417a-ada7-11a9a350df17\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"d3525ac6-c098-479a-a086-dfbde7919d6d\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Color\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#FCC838\"}]}"
+  display_mode: CHART_MODE
