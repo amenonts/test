@@ -1,0 +1,40 @@
+guid: 9f06292b-b425-4786-92a0-a7c492186d4a
+answer:
+  name: Total Tax by Monthly Order Date
+  tables:
+  - id: Parameters WS
+    name: Parameters WS
+    fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+  search_query: "[Tax] [Type] [Order Date] [Order Date].monthly"
+  answer_columns:
+  - name: Total Tax
+  - name: Type
+  - name: Month(Order Date)
+  table:
+    table_columns:
+    - column_id: Type
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Month(Order Date)
+      headline_aggregation: MIN-MAX
+    - column_id: Total Tax
+      headline_aggregation: SUM
+    ordered_column_ids:
+    - Type
+    - Month(Order Date)
+    - Total Tax
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: LINE
+    chart_columns:
+    - column_id: Type
+    - column_id: Month(Order Date)
+    - column_id: Total Tax
+    axis_configs:
+    - x:
+      - Month(Order Date)
+      "y":
+      - Total Tax
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Type\",\"columnProperty\": {}},{\"columnId\": \"Month(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Tax\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"924217a7-9637-4973-8235-a6224d9bafff\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Tax\"],\"isOpposite\": false}},{\"id\": \"1d370519-cb81-4c8c-b92d-b789ef01e730\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Order Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Tax\",\"color\": \"#FCC838\"}]}"
+  display_mode: CHART_MODE
