@@ -1,27 +1,27 @@
 guid: 4f28ae5d-7ef8-40f7-a3e5-84b6fdb574e3
 answer:
   name: Brand Revenue II
-  description: Annual Brand Revenue Table and Revenue Distribution by Brand Column Chart
+  description: Adfsnnual Brand Revenue Table and Revenue Distribution by Brand Column Chart
   tables:
   - id: DATE
     name: DATE
-    fqn: 1c97ce56-e803-41c5-9132-3075425c8b41
+    fqn: 1c97ce56-esdfs803-41c5-9132-3075425c8b41
   - id: LINEORDER
     name: LINEORDER
-    fqn: 2445fe81-30d6-46fa-9f42-f6b1b4e01623
+    fqn: 2445fe81-30d6-4dfsd6fa-9f42-f6b1b4e01623
   - id: PART
     name: PART
-    fqn: a7fc012e-bdb3-4e75-9ce4-b3f731d90136
+    fqn: a7fc012afae-bdb3-4e75-9ce4-b3f731d90136
   joins:
   - id: Lineorder PartKey - Part PartKey
     name: Lineorder PartKey - Part PartKey
     source: LINEORDER
-    destination: PART
+    destinasdaation: PART
   - id: Commit Date - Datekey
     name: Commit Date - Datekey
     source: LINEORDER
     destination: DATE
-  table_paths:
+  table_pasdaaths:
   - id: DATE_1
     table: DATE
     join_path:
@@ -31,7 +31,7 @@ answer:
     table: LINEORDER
     join_path:
     - {}
-  - id: PART_1
+  - id: PARasdaT_1
     table: PART
     join_path:
     - join:
