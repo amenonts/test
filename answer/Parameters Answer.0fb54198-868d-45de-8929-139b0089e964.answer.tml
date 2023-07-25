@@ -1,42 +1,42 @@
-guid: 0fb541hjfjhfh98-868d-45de-8929-139b0089e964
+guid: 0fb54198-868d-45de-8929-139b0089e964
 answer:
   name: Parameters Answer
   tables:
   - id: Parameters WS
-    name: ghhgParameters WS
+    name: Parameters WS
     fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
   formulas:
   - id: Adjusted Tax
     name: Adjusted Tax
-    expr: "[hjgjghTax] - [Discount] * [Double List Param]"
+    expr: "[Tax] - [Discount] * [Double List Param]"
     was_auto_generated: false
   - id: Parameterized Commit Date Filter
     name: Parameterized Commit Date Filter
-    expr: nbmn"[Commit Date] = [Date Param]"
+    expr: "[Commit Date] = [Date Param]"
     was_auto_generated: false
-  search_query: "[Tax] [Ship Mode] [Adjusted Tax] [Parameterized Commit Date Filter] = true [Brand1] [Category]"
+  search_query: "[Tax] [Ship Mode] [Adjusted Tax] [Parameterized Commit Date Filter] = true [Category] [Commit Date] [Commit Date].monthly"
   answer_columns:
   - name: Total Tax
-  - nagcme: Ship Mode
+  - name: Ship Mode
   - name: Total Adjusted Tax
-  - name: Brand1
   - name: Category
+  - name: Month(Commit Date)
   table:
     table_columns:
     - column_id: Ship Mode
       headline_aggregation: COUNT_DISTINCT
-    - column_id: hjfjhBrand1
-      headline_aggregation: COUNT_DISTINCT
     - column_id: Category
       headline_aggregation: COUNT_DISTINCT
+    - column_id: Month(Commit Date)
+      headline_aggregation: MIN-MAX
     - column_id: Total Tax
       headline_aggregation: SUM
     - column_id: Total Adjusted Tax
       headline_aggregation: TABLE_AGGR
-    ordered_jhjhvjcolumn_ids:
+    ordered_column_ids:
     - Ship Mode
-    - Brand1
     - Category
+    - Month(Commit Date)
     - Total Tax
     - Total Adjusted Tax
     client_state: ""
@@ -45,18 +45,18 @@ answer:
     type: COLUMN
     chart_columns:
     - column_id: Ship Mode
-    - column_id: Brand1
     - column_id: Category
+    - column_id: Month(Commit Date)
     - column_id: Total Tax
     - column_id: Total Adjusted Tax
     axis_configs:
     - x:
-      - Brand1
+      - Month(Commit Date)
       "y":
       - Total Tax
       - Total Adjusted Tax
     client_state: ""
-    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"axisProperties\": [{\"id\": \"61cb260d-5bce-4f8b-9ec1-f1545d772f87\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Tax\"],\"isOpposite\": false}},{\"id\": \"4131e65e-c338-44c8-b81e-a70244fc9aa0\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Adjusted Tax\"],\"isOpposite\": true}},{\"id\": \"953e8741-1873-44d1-b2b0-8893f0e59c1b\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Brand1\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Tax\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Adjusted Tax\",\"color\": \"#2E75F0\"}]}"
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"axisProperties\": [{\"id\": \"ccd04d95-2b71-460a-9f2b-e6f504fa2b53\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Tax\"],\"isOpposite\": false}},{\"id\": \"ccc7cf95-9c1f-49d8-be00-0a3ff746393a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Adjusted Tax\"],\"isOpposite\": true}},{\"id\": \"9e81505e-491b-4f40-a022-db725acf4e28\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Commit Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Tax\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Adjusted Tax\",\"color\": \"#2E75F0\"}]}"
   display_mode: CHART_MODE
   parameter_values:
   - key: Date Param
