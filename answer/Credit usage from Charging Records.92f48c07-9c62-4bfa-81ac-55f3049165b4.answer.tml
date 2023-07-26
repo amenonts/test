@@ -1,0 +1,62 @@
+guid: 92f48c07-9c62-4bfa-81ac-55f3049165b4
+answer:
+  name: Credit usage from Charging Records
+  description: "COPY and EDIT : Change Username and Timestamp to trace events using Credit Usage Worksheet"
+  tables:
+  - id: Credit Usage Worksheet
+    name: Credit Usage Worksheet
+    fqn: 965b5f46-7162-4c16-8aac-7ab26f313b25
+  search_query: "[Timestamp] [Timestamp].detailed [Username] [API] [Credit Window ID] [Event Category] [Capped Credit Usage] [Uncapped Credit Usage] sort by [Timestamp] [Timestamp].detailed [Timestamp] >= '01/01/2021 00:00:00' [Timestamp] <= '12/31/2021 00:00:00' [Username] = 'tsadmin'"
+  answer_columns:
+  - name: Timestamp
+  - name: Username
+  - name: API
+  - name: Credit Window ID
+  - name: Event Category
+  - name: Total Capped Credit Usage
+  - name: Total Uncapped Credit Usage
+  table:
+    table_columns:
+    - column_id: Timestamp
+      headline_aggregation: MIN-MAX
+    - column_id: Username
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: API
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Credit Window ID
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Event Category
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Total Capped Credit Usage
+      headline_aggregation: TABLE_AGGR
+    - column_id: Total Uncapped Credit Usage
+      headline_aggregation: SUM
+    ordered_column_ids:
+    - Timestamp
+    - Username
+    - API
+    - Credit Window ID
+    - Event Category
+    - Total Capped Credit Usage
+    - Total Uncapped Credit Usage
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Timestamp\",\"columnProperty\": {}},{\"columnId\": \"Username\",\"columnProperty\": {}},{\"columnId\": \"API\",\"columnProperty\": {}},{\"columnId\": \"Credit Window ID\",\"columnProperty\": {}},{\"columnId\": \"Event Category\",\"columnProperty\": {}},{\"columnId\": \"Total Capped Credit Usage\",\"columnProperty\": {}},{\"columnId\": \"Total Uncapped Credit Usage\",\"columnProperty\": {}}]}"
+  chart:
+    type: COLUMN
+    chart_columns:
+    - column_id: Timestamp
+    - column_id: Username
+    - column_id: API
+    - column_id: Credit Window ID
+    - column_id: Event Category
+    - column_id: Total Capped Credit Usage
+    - column_id: Total Uncapped Credit Usage
+    axis_configs:
+    - x:
+      - Timestamp
+      "y":
+      - Total Capped Credit Usage
+      - Total Uncapped Credit Usage
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {}},\"axisProperties\": [{\"id\": \"7d1008ad-7f03-4e07-b342-0b3eb9843a75\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Capped Credit Usage\"],\"isOpposite\": false}},{\"id\": \"eb4db006-d798-455f-9b16-dc39d3a8c76a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Uncapped Credit Usage\"],\"isOpposite\": true}},{\"id\": \"89d7f74c-ba9c-4c1e-8d5b-eb6629433a03\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Timestamp\"]}}]}"
+  display_mode: TABLE_MODE
