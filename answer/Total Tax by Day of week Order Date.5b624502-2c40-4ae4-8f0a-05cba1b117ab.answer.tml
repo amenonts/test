@@ -1,0 +1,45 @@
+guid: 5b624502-2c40-4ae4-8f0a-05cba1b117ab
+answer:
+  name: Total Tax by Day of week Order Date
+  tables:
+  - id: Parameters WS
+    name: Parameters WS
+    fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+  search_query: "[Tax] [Type] [Order Date].'day of week' [Part Partkey]"
+  answer_columns:
+  - name: Total Tax
+  - name: Type
+  - name: Day of Week(Order Date)
+  - name: Part Partkey
+  table:
+    table_columns:
+    - column_id: Type
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Day of Week(Order Date)
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Part Partkey
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Total Tax
+      headline_aggregation: SUM
+    ordered_column_ids:
+    - Type
+    - Day of Week(Order Date)
+    - Part Partkey
+    - Total Tax
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: LINE
+    chart_columns:
+    - column_id: Type
+    - column_id: Day of Week(Order Date)
+    - column_id: Part Partkey
+    - column_id: Total Tax
+    axis_configs:
+    - x:
+      - Day of Week(Order Date)
+      "y":
+      - Total Tax
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Type\",\"columnProperty\": {}},{\"columnId\": \"Day of Week(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Part Partkey\",\"columnProperty\": {}},{\"columnId\": \"Total Tax\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"d33531ec-1817-4144-8ae3-ce4bd522a014\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Tax\"],\"isOpposite\": false}},{\"id\": \"3627ad95-701c-4ce5-aaef-78bd5e4315f1\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day of Week(Order Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Tax\",\"color\": \"#48D1E0\"}]}"
+  display_mode: CHART_MODE
