@@ -1,0 +1,60 @@
+guid: 540c45f4-397b-4455-b576-2ddf9af0a33c
+answer:
+  name: ThoughtSpot first report
+  description: ThoughtSpot first report Table
+  tables:
+  - id: LINEORDER
+    name: LINEORDER
+    fqn: 2445fe81-30d6-46fa-9f42-f6b1b4e01623
+  - id: PART
+    name: PART
+    fqn: a7fc012e-bdb3-4e75-9ce4-b3f731d90136
+  joins:
+  - id: Lineorder PartKey - Part PartKey
+    name: Lineorder PartKey - Part PartKey
+    source: LINEORDER
+    destination: PART
+  table_paths:
+  - id: LINEORDER_1
+    table: LINEORDER
+    join_path:
+    - {}
+  - id: PART_1
+    table: PART
+    join_path:
+    - join:
+      - Lineorder PartKey - Part PartKey
+  search_query: "[LINEORDER_1::Revenue] by [PART_1::Brand1] [LINEORDER_1::Discount]"
+  answer_columns:
+  - name: Total Revenue
+  - name: Brand1
+  - name: Total Discount
+  table:
+    table_columns:
+    - column_id: Brand1
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Total Revenue
+      headline_aggregation: SUM
+    - column_id: Total Discount
+      headline_aggregation: SUM
+    ordered_column_ids:
+    - Brand1
+    - Total Revenue
+    - Total Discount
+    client_state: "{\"wrapTableHeader\":true}"
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"Brand1\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}]}"
+  chart:
+    type: COLUMN
+    chart_columns:
+    - column_id: Brand1
+    - column_id: Total Revenue
+    - column_id: Total Discount
+    axis_configs:
+    - x:
+      - Brand1
+      "y":
+      - Total Revenue
+    client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"2f86a7f5-2fce-48ca-94c7-eb2b616774d1\":{\"linkedColumns\":[\"Total Revenue\"],\"axisType\":\"Y\",\"isOpposite\":false},\"6c092cd4-0530-462f-8d28-e3b1cd620dd6\":{\"linkedColumns\":[\"Brand1\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"Total Revenue\":\"#8C62F5\"},\"version\":\"V2.1\",\"columnProperties\":{\"Brand1\":{},\"Total Revenue\":{}}}"
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Brand1\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}},{\"columnId\": \"Total Discount\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"2f86a7f5-2fce-48ca-94c7-eb2b616774d1\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"6c092cd4-0530-462f-8d28-e3b1cd620dd6\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Brand1\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#8C62F5\"}]}"
+  display_mode: CHART_MODE
+  client_state: "{\"answerMode\":\"advanced\"}"
