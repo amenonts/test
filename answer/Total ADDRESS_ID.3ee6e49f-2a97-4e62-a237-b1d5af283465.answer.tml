@@ -1,0 +1,38 @@
+guid: 3ee6e49f-2a97-4e62-a237-b1d5af283465
+answer:
+  name: Total ADDRESS_ID
+  tables:
+  - id: UKH_HOUSING
+    name: UKH_HOUSING
+    fqn: 4e85df5c-94c0-47c6-b769-759ff9fb81dd
+  search_query: "[ADDRESS_ID] [OWNERSHIP_ID] [PRICE]"
+  answer_columns:
+  - name: Total ADDRESS_ID
+  - name: Total OWNERSHIP_ID
+  - name: Total PRICE
+  table:
+    table_columns:
+    - column_id: Total ADDRESS_ID
+      show_headline: false
+    - column_id: Total OWNERSHIP_ID
+      show_headline: false
+    - column_id: Total PRICE
+      show_headline: false
+    ordered_column_ids:
+    - Total ADDRESS_ID
+    - Total OWNERSHIP_ID
+    - Total PRICE
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: KPI
+    chart_columns:
+    - column_id: Total ADDRESS_ID
+    - column_id: Total OWNERSHIP_ID
+    - column_id: Total PRICE
+    axis_configs:
+    - "y":
+      - Total ADDRESS_ID
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {}},\"columnProperties\": [{\"columnId\": \"Total ADDRESS_ID\",\"columnProperty\": {}},{\"columnId\": \"Total OWNERSHIP_ID\",\"columnProperty\": {}},{\"columnId\": \"Total PRICE\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"079583fc-1cfe-45cb-925b-9ee782f89e23\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total ADDRESS_ID\"],\"isOpposite\": false}},{\"id\": \"2094850f-8701-4090-81b4-95f922431b97\",\"properties\": {\"axisType\": \"X\"}}]}"
+  display_mode: CHART_MODE
