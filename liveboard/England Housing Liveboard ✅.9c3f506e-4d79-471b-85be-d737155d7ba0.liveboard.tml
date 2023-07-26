@@ -1,0 +1,339 @@
+guid: 9c3f506e-4d79-471b-85be-d737155d7ba0
+liveboard:
+  name: England Housing Liveboard ✅
+  description: This is a Liveboard that looks at the Price Paid Data property sales in England submitted to HM Land Registry for registration. Price Paid Data is based on the raw data released each month. For more information please click <a href="https://www.gov.uk/guidance/about-the-price-paid-data">here.</a>
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: "Total Count Sold, Average Price by Yearly Completion Date"
+      tables:
+      - id: England Housing WS
+        name: England Housing WS
+        fqn: 33a6d177-aa6d-4bc1-ade8-8dd37129a6bf
+      search_query: "[Completion Date].yearly [Sold] average [Total Price] [Completion Date] before '01/01/2022'"
+      answer_columns:
+      - name: Year(Completion Date)
+      - name: Number of Sold
+      - name: Average Total Price
+      table:
+        table_columns:
+        - column_id: Year(Completion Date)
+          show_headline: false
+        - column_id: Number of Sold
+          show_headline: false
+        - column_id: Average Total Price
+          show_headline: false
+        ordered_column_ids:
+        - Year(Completion Date)
+        - Number of Sold
+        - Average Total Price
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: LINE_COLUMN
+        chart_columns:
+        - column_id: Year(Completion Date)
+        - column_id: Number of Sold
+        - column_id: Average Total Price
+        axis_configs:
+        - x:
+          - Year(Completion Date)
+          "y":
+          - Number of Sold
+          - Average Total Price
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"axisProperties\": [{\"id\": \"58b88f5c-3bad-4415-8d2a-8ba5775dee25\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Sold\"],\"isOpposite\": false}},{\"id\": \"77e4dd4a-7cd3-4c28-8556-45d2bcad7452\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Average Total Price\"],\"isOpposite\": true}},{\"id\": \"70a41451-7b1e-4c1b-9c39-b872b245b38d\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Year(Completion Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Number of Sold\",\"color\": \"#48D1E0\"},{\"serieName\": \"Average Total Price\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 9e365908-f4c1-43fa-8afd-12f4e120cb46
+  - id: Viz_2
+    answer:
+      name: Average Price by County
+      tables:
+      - id: England Housing WS
+        name: England Housing WS
+        fqn: 33a6d177-aa6d-4bc1-ade8-8dd37129a6bf
+      search_query: "[Average Price] [County]"
+      answer_columns:
+      - name: Average Average Price
+      - name: County
+      table:
+        table_columns:
+        - column_id: County
+          show_headline: false
+        - column_id: Average Average Price
+          show_headline: false
+        ordered_column_ids:
+        - County
+        - Average Average Price
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: GEO_AREA
+        chart_columns:
+        - column_id: County
+        - column_id: Average Average Price
+        axis_configs:
+        - x:
+          - County
+          "y":
+          - Average Average Price
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"mapviewport\": {\"center\": [-255360.77765932126,6973748.519859394],\"zoomLevel\": 6.58260576233016},\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"axisProperties\": [{\"id\": \"653fd099-b338-4285-833d-455844391f4d\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Average Average Price\"],\"isOpposite\": false}},{\"id\": \"0e94d50c-bb13-4f0c-8fec-f4b516206f61\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"County\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Average Average Price\",\"color\": \"#8C62F5\"}],\"systemMultiColorSeriesColors\": [{\"serieName\": \"Average Average Price\",\"colorMap\": [{\"serieName\": \"County\",\"color\": [\"#ffffb2\",\"#fddd87\",\"#fba35d\",\"#f75534\",\"#f9140a\",\"#d70315\",\"#b10026\"]}]}]}"
+      display_mode: CHART_MODE
+    viz_guid: acf1c586-78f7-4318-b2c8-e7a23ace8f40
+  - id: Viz_3
+    answer:
+      name: Average Price by District
+      tables:
+      - id: England Housing WS
+        name: England Housing WS
+        fqn: 33a6d177-aa6d-4bc1-ade8-8dd37129a6bf
+      search_query: "[Average Price] [District]"
+      answer_columns:
+      - name: Average Average Price
+      - name: District
+      table:
+        table_columns:
+        - column_id: District
+          show_headline: false
+        - column_id: Average Average Price
+          show_headline: false
+        ordered_column_ids:
+        - District
+        - Average Average Price
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: GEO_AREA
+        chart_columns:
+        - column_id: District
+        - column_id: Average Average Price
+        axis_configs:
+        - x:
+          - District
+          "y":
+          - Average Average Price
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"mapviewport\": {\"center\": [-255065.32752545556,6975541.342462],\"zoomLevel\": 6.549282853881377},\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"axisProperties\": [{\"id\": \"3aa8c387-ad40-42fb-8520-a8c0a1ca189d\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Average Average Price\"],\"isOpposite\": false}},{\"id\": \"3478b97d-449e-478d-900a-d7ebf3902815\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"District\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Average Average Price\",\"color\": \"#8C62F5\"}],\"systemMultiColorSeriesColors\": [{\"serieName\": \"Average Average Price\",\"colorMap\": [{\"serieName\": \"0cfc64a1-b2dd-423b-b505-4e6e5bc9d3be\",\"color\": [\"#ffffb2\",\"#fddd87\",\"#fba35d\",\"#f75534\",\"#f9140a\",\"#d70315\",\"#b10026\"]},{\"serieName\": \"District\",\"color\": [\"#ffffb2\",\"#fddd87\",\"#fba35d\",\"#f75534\",\"#f9140a\",\"#d70315\",\"#b10026\"]}]}]}"
+      display_mode: CHART_MODE
+    viz_guid: 6a2643f4-2bc7-45e2-94dc-0bdcd4c441c4
+  - id: Viz_4
+    answer:
+      name: Average Price by Year
+      tables:
+      - id: England Housing WS
+        name: England Housing WS
+        fqn: 33a6d177-aa6d-4bc1-ade8-8dd37129a6bf
+      search_query: "[Average Price] [Completion Date].yearly"
+      answer_columns:
+      - name: Average Average Price
+      - name: Year(Completion Date)
+      table:
+        table_columns:
+        - column_id: Year(Completion Date)
+          show_headline: false
+        - column_id: Average Average Price
+          show_headline: false
+        ordered_column_ids:
+        - Year(Completion Date)
+        - Average Average Price
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Year(Completion Date)
+        - column_id: Average Average Price
+        axis_configs:
+        - x:
+          - Year(Completion Date)
+          "y":
+          - Average Average Price
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"axisProperties\": [{\"id\": \"9ca6c826-33f5-4664-8920-ebd605f9272b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Average Average Price\"],\"isOpposite\": false}},{\"id\": \"1b449527-fb8c-4dc4-97b4-2f5313503872\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Year(Completion Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Average Average Price\",\"color\": \"#2770ef\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: f3e02720-c3d8-4871-a69e-589999bd6cb7
+  - id: Viz_5
+    answer:
+      name: Total Sold by Year
+      tables:
+      - id: England Housing WS
+        name: England Housing WS
+        fqn: 33a6d177-aa6d-4bc1-ade8-8dd37129a6bf
+      search_query: "[Completion Date].yearly [Sold]"
+      answer_columns:
+      - name: Year(Completion Date)
+      - name: Number of Sold
+      table:
+        table_columns:
+        - column_id: Year(Completion Date)
+          show_headline: false
+        - column_id: Number of Sold
+          show_headline: false
+        ordered_column_ids:
+        - Year(Completion Date)
+        - Number of Sold
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Year(Completion Date)
+        - column_id: Number of Sold
+        axis_configs:
+        - x:
+          - Year(Completion Date)
+          "y":
+          - Number of Sold
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"axisProperties\": [{\"id\": \"88a44ac5-1239-4da3-9759-c983b7e827f8\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Sold\"],\"isOpposite\": false}},{\"id\": \"2bc10851-50fe-4e91-9094-b1d6bb8b9e1d\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Year(Completion Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Number of Sold\",\"color\": \"#2770ef\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: b2c6d77d-47ea-4d8a-987c-d2a14face20d
+  - id: Viz_6
+    answer:
+      name: Growth of Average Price by Date
+      tables:
+      - id: England Housing WS
+        name: England Housing WS
+        fqn: 33a6d177-aa6d-4bc1-ade8-8dd37129a6bf
+      search_query: "growth of [Average Price] by [Completion Date] [Completion Date].yearly"
+      answer_columns:
+      - name: Growth of Average Average Price
+      - name: Year(Completion Date)
+      table:
+        table_columns:
+        - column_id: Year(Completion Date)
+          show_headline: false
+        - column_id: Growth of Average Average Price
+          show_headline: false
+        ordered_column_ids:
+        - Year(Completion Date)
+        - Growth of Average Average Price
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: WATERFALL
+        chart_columns:
+        - column_id: Year(Completion Date)
+        - column_id: Growth of Average Average Price
+        axis_configs:
+        - x:
+          - Year(Completion Date)
+          "y":
+          - Growth of Average Average Price
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"columnProperties\": [{\"columnId\": \"Year(Completion Date)\",\"columnProperty\": {}},{\"columnId\": \"Growth of Average Average Price\",\"columnProperty\": {\"conditionalFormatting\": {\"rows\": [{\"operator\": \"LESS_THAN\",\"value\": \"0\",\"plotAsBand\": false,\"backgroundFormatType\": \"SOLID\",\"solidBackgroundAttrs\": {\"color\": \"#F04152\"}},{\"operator\": \"GREATER_THAN_EQUAL_TO\",\"value\": \"0\",\"plotAsBand\": false,\"backgroundFormatType\": \"SOLID\",\"solidBackgroundAttrs\": {\"color\": \"#06BF7F\"}}]}}}],\"axisProperties\": [{\"id\": \"5c8a0d9f-2672-4ac7-b6fb-d2bdb21ba487\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Year(Completion Date)\"]}},{\"id\": \"aec68034-76f8-4c85-9930-f2540543ef15\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Growth of Average Average Price\"],\"name\": \"Growth of Average Price\",\"isOpposite\": false}}],\"systemSeriesColors\": [{\"serieName\": \"97d69a8e-a917-4ac3-aa63-c3726713ec46\",\"color\": \"#2770ef\"},{\"serieName\": \"Growth of Average Average Price\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: c2232752-bc37-41ad-86f8-99d02e17615a
+  - id: Viz_7
+    answer:
+      name: Top 10 Addresses Sold
+      tables:
+      - id: England Housing WS
+        name: England Housing WS
+        fqn: 33a6d177-aa6d-4bc1-ade8-8dd37129a6bf
+      formulas:
+      - id: Address
+        name: Address
+        expr: "concat ( \"{caption}\" , [Firstline Address] , \"{/caption}\" , [Address Url] )"
+        was_auto_generated: false
+      search_query: "top 10 [Total Price] [District] [Postcode] [Completion Date] [Completion Date].monthly [Address]"
+      answer_columns:
+      - name: Total Total Price
+      - name: District
+      - name: Postcode
+      - name: Month(Completion Date)
+      - name: Address
+      table:
+        table_columns:
+        - column_id: District
+          show_headline: false
+        - column_id: Postcode
+          show_headline: false
+        - column_id: Month(Completion Date)
+          show_headline: false
+        - column_id: Address
+          show_headline: false
+        - column_id: Total Total Price
+          show_headline: false
+        ordered_column_ids:
+        - District
+        - Postcode
+        - Month(Completion Date)
+        - Address
+        - Total Total Price
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"widthState\": [{\"columnId\": \"District\",\"width\": 149.54094587053572}],\"orderedColumnIds\": [\"Month(Completion Date)\",\"District\",\"Address\",\"Postcode\",\"Total Total Price\"]}"
+      chart:
+        type: GEO_AREA
+        chart_columns:
+        - column_id: District
+        - column_id: Postcode
+        - column_id: Month(Completion Date)
+        - column_id: Address
+        - column_id: Total Total Price
+        axis_configs:
+        - x:
+          - District
+          "y":
+          - Total Total Price
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"columnProperties\": [{\"columnId\": \"District\",\"columnProperty\": {}},{\"columnId\": \"Postcode\",\"columnProperty\": {}},{\"columnId\": \"Month(Completion Date)\",\"columnProperty\": {}},{\"columnId\": \"Address\",\"columnProperty\": {}},{\"columnId\": \"Total Total Price\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"30338b05-d0a4-4266-ab75-f1fc14d42c5e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Total Price\"],\"isOpposite\": false}},{\"id\": \"c245dffb-41b2-496f-86f3-8db03fd34b17\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"District\"]}}],\"systemSeriesColors\": [{\"serieName\": \"97d69a8e-a917-4ac3-aa63-c3726713ec46\",\"color\": \"#2770ef\"},{\"serieName\": \"9b0adf00-b0e7-46cf-9438-e02e263decbf\",\"color\": \"#2E75F0\"}]}"
+      display_mode: TABLE_MODE
+    viz_guid: 4f9c8687-eb21-43b2-ab10-093e38a9601c
+  - id: Viz_8
+    answer:
+      name: London vs All by Year
+      tables:
+      - id: England Housing WS
+        name: England Housing WS
+        fqn: 33a6d177-aa6d-4bc1-ade8-8dd37129a6bf
+      search_query: "[Average Price] [Town City].london vs all [Completion Date].yearly sort by [Completion Date] [Completion Date].yearly"
+      answer_columns:
+      - name: Average Price(london)
+      - name: Average Price(all)
+      - name: Year(Completion Date)
+      table:
+        table_columns:
+        - column_id: Year(Completion Date)
+          show_headline: false
+        - column_id: Average Price(london)
+          show_headline: false
+        - column_id: Average Price(all)
+          show_headline: false
+        ordered_column_ids:
+        - Year(Completion Date)
+        - Average Price(all)
+        - Average Price(london)
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Year(Completion Date)
+        - column_id: Average Price(london)
+        - column_id: Average Price(all)
+        axis_configs:
+        - x:
+          - Year(Completion Date)
+          "y":
+          - Average Price(all)
+          - Average Price(london)
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"axisProperties\": [{\"id\": \"6059b5ec-7dc8-42bd-82bb-c3d98ff11b5b\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Year(Completion Date)\"]}},{\"id\": \"f292ceb8-8256-4f27-8b61-de96e4029f2f\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Average Price(all)\",\"Average Price(london)\"],\"isOpposite\": false}}],\"systemSeriesColors\": [{\"serieName\": \"Average Price(all)\",\"color\": \"#2E75F0\"},{\"serieName\": \"Average Price(london)\",\"color\": \"#48D1E0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: e5e1778e-9cf5-4747-a448-179cf2c37ff4
+  filters:
+  - column:
+    - County
+    is_mandatory: false
+  - column:
+    - Locality
+    is_mandatory: false
+  - column:
+    - District
+    is_mandatory: false
+  - column:
+    - Type
+    is_mandatory: false
+  layout: {}
