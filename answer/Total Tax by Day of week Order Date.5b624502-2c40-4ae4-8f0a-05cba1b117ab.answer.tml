@@ -5,12 +5,13 @@ answer:
   - id: Parameters WS
     name: Parameters WS
     fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
-  search_query: "[Tax] [Type] [Order Date].'day of week' [Part Partkey]"
+  search_query: "[Tax] [Type] [Order Date].'day of week' [Part Partkey] [Discount]"
   answer_columns:
   - name: Total Tax
   - name: Type
   - name: Day of Week(Order Date)
   - name: Part Partkey
+  - name: Total Discount
   table:
     table_columns:
     - column_id: Type
@@ -21,11 +22,14 @@ answer:
       headline_aggregation: COUNT_DISTINCT
     - column_id: Total Tax
       headline_aggregation: SUM
+    - column_id: Total Discount
+      headline_aggregation: SUM
     ordered_column_ids:
     - Type
     - Day of Week(Order Date)
     - Part Partkey
     - Total Tax
+    - Total Discount
     client_state: ""
     client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
   chart:
@@ -35,11 +39,13 @@ answer:
     - column_id: Day of Week(Order Date)
     - column_id: Part Partkey
     - column_id: Total Tax
+    - column_id: Total Discount
     axis_configs:
     - x:
       - Day of Week(Order Date)
       "y":
       - Total Tax
+      - Total Discount
     client_state: ""
-    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Type\",\"columnProperty\": {}},{\"columnId\": \"Day of Week(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Part Partkey\",\"columnProperty\": {}},{\"columnId\": \"Total Tax\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"d33531ec-1817-4144-8ae3-ce4bd522a014\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Tax\"],\"isOpposite\": false}},{\"id\": \"3627ad95-701c-4ce5-aaef-78bd5e4315f1\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day of Week(Order Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Tax\",\"color\": \"#48D1E0\"}]}"
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Type\",\"columnProperty\": {}},{\"columnId\": \"Day of Week(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Part Partkey\",\"columnProperty\": {}},{\"columnId\": \"Total Tax\",\"columnProperty\": {}},{\"columnId\": \"Total Discount\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"0c7a0f7a-7dfc-4023-9def-bd600d6a0d03\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Tax\"],\"isOpposite\": false}},{\"id\": \"079185d7-42a6-4f8b-993a-cec15bc41c03\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Discount\"],\"isOpposite\": true}},{\"id\": \"7d601e7e-8031-4d35-b843-569d0de66508\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day of Week(Order Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Tax\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Discount\",\"color\": \"#FCC838\"}]}"
   display_mode: CHART_MODE
