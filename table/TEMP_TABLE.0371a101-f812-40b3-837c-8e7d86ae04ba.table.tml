@@ -1,0 +1,28 @@
+guid: 0371a101-f812-40b3-837c-8e7d86ae04ba
+table:
+  name: TEMP_TABLE
+  db: SUPPLYCHAIN_MAIN
+  schema: TEST
+  db_table: TEMP_TABLE
+  connection:
+    name: SnowflakeConnection
+    fqn: 46030ea3-ecba-4cbf-a02c-c2ef5d5f29f1
+  columns:
+  - name: ID
+    db_column_name: ID
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: NAME
+    db_column_name: NAME
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: AGE
+    db_column_name: AGE
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
