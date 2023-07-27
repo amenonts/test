@@ -14,18 +14,21 @@ answer:
     name: Parameterized Commit Date Filter
     expr: "[Commit Date] = [Date Param]"
     was_auto_generated: false
-  search_query: "[Tax] [Ship Mode] [Adjusted Tax] [Parameterized Commit Date Filter] = true [Commit Date] [Commit Date].monthly"
+  search_query: "[Tax] [Ship Mode] [Adjusted Tax] [Parameterized Commit Date Filter] = true [Commit Date] [Commit Date].monthly [Category]"
   answer_columns:
   - name: Total Tax
   - name: Ship Mode
   - name: Total Adjusted Tax
   - name: Month(Commit Date)
+  - name: Category
   table:
     table_columns:
     - column_id: Ship Mode
       headline_aggregation: COUNT_DISTINCT
     - column_id: Month(Commit Date)
       headline_aggregation: MIN-MAX
+    - column_id: Category
+      headline_aggregation: COUNT_DISTINCT
     - column_id: Total Tax
       headline_aggregation: SUM
     - column_id: Total Adjusted Tax
@@ -33,15 +36,17 @@ answer:
     ordered_column_ids:
     - Ship Mode
     - Month(Commit Date)
+    - Category
     - Total Tax
     - Total Adjusted Tax
     client_state: ""
     client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
   chart:
-    type: LINE
+    type: COLUMN
     chart_columns:
     - column_id: Ship Mode
     - column_id: Month(Commit Date)
+    - column_id: Category
     - column_id: Total Tax
     - column_id: Total Adjusted Tax
     axis_configs:
