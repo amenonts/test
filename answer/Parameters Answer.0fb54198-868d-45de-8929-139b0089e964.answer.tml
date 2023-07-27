@@ -14,50 +14,45 @@ answer:
     name: Parameterized Commit Date Filter
     expr: "[Commit Date] = [Date Param]"
     was_auto_generated: false
-  search_query: "[Tax] [Ship Mode] [Adjusted Tax] [Parameterized Commit Date Filter] = true [Category] [Brand1]"
+  search_query: "[Tax] [Ship Mode] [Adjusted Tax] [Parameterized Commit Date Filter] = true [Commit Date] [Commit Date].monthly"
   answer_columns:
   - name: Total Tax
   - name: Ship Mode
   - name: Total Adjusted Tax
-  - name: Category
-  - name: Brand1
+  - name: Month(Commit Date)
   table:
     table_columns:
     - column_id: Ship Mode
       headline_aggregation: COUNT_DISTINCT
-    - column_id: Category
-      headline_aggregation: COUNT_DISTINCT
-    - column_id: Brand1
-      headline_aggregation: COUNT_DISTINCT
+    - column_id: Month(Commit Date)
+      headline_aggregation: MIN-MAX
     - column_id: Total Tax
       headline_aggregation: SUM
     - column_id: Total Adjusted Tax
       headline_aggregation: TABLE_AGGR
     ordered_column_ids:
     - Ship Mode
-    - Category
-    - Brand1
+    - Month(Commit Date)
     - Total Tax
     - Total Adjusted Tax
     client_state: ""
     client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
   chart:
-    type: COLUMN
+    type: LINE
     chart_columns:
     - column_id: Ship Mode
-    - column_id: Category
-    - column_id: Brand1
+    - column_id: Month(Commit Date)
     - column_id: Total Tax
     - column_id: Total Adjusted Tax
     axis_configs:
     - x:
-      - Brand1
+      - Month(Commit Date)
       "y":
       - Total Tax
       - Total Adjusted Tax
     client_state: ""
-    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"axisProperties\": [{\"id\": \"ad6b020b-1e41-4ff4-91a3-a6a876eb9a75\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Tax\"],\"isOpposite\": false}},{\"id\": \"3b007e47-193e-4eb3-a428-09e0b2867e04\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Adjusted Tax\"],\"isOpposite\": true}},{\"id\": \"448773a6-f2f2-499b-aa9d-e520c6768ae6\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Brand1\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Tax\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Adjusted Tax\",\"color\": \"#2E75F0\"}]}"
-  display_mode: CHART_MODE
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"axisProperties\": [{\"id\": \"a8317228-b139-41ea-bdc3-6c27ccacdde3\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Tax\"],\"isOpposite\": false}},{\"id\": \"7d4e7b81-2676-485b-bbf4-d9209c6299c0\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Adjusted Tax\"],\"isOpposite\": true}},{\"id\": \"2c894d74-37a5-4969-83cc-02be338b168c\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Commit Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Tax\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Adjusted Tax\",\"color\": \"#2E75F0\"}]}"
+  display_mode: TABLE_MODE
   parameter_values:
   - key: Date Param
     value: 10/16/1994
