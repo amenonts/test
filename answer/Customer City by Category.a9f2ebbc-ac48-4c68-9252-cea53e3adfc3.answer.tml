@@ -1,0 +1,35 @@
+guid: a9f2ebbc-ac48-4c68-9252-cea53e3adfc3
+answer:
+  name: Customer City by Category
+  tables:
+  - id: Broken WS
+    name: Broken WS
+    fqn: 1ac1a13a-0eea-479c-9bd6-25f16cf3ce70
+  search_query: "[Category] [Customer City]"
+  answer_columns:
+  - name: Category
+  - name: Customer City
+  table:
+    table_columns:
+    - column_id: Category
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Customer City
+      headline_aggregation: COUNT_DISTINCT
+    ordered_column_ids:
+    - Category
+    - Customer City
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: SCATTER
+    chart_columns:
+    - column_id: Category
+    - column_id: Customer City
+    axis_configs:
+    - x:
+      - Category
+      "y":
+      - Customer City
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Category\",\"columnProperty\": {}},{\"columnId\": \"Customer City\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"45fc8a2a-53a9-4921-bd60-d851b6aa9c47\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Customer City\"],\"isOpposite\": false}},{\"id\": \"739c35d2-c5f3-434c-af2f-18aa677541cd\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Category\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Customer City\",\"color\": \"#2E75F0\"}]}"
+  display_mode: CHART_MODE
